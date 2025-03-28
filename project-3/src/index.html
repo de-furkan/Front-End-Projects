@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Keep Boiler -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- author+web. -->
+    <meta name="author" content="Furkan O.">
+    <meta name="keywords" content="order, music, summary, component">
+    <meta 
+        name="description" 
+        content="A practice site designed by front-end mentor and coded by Furkan O."
+    >
+    <!-- security+comp. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <!-- favicon and title -->
+    <link rel="shortcut icon" href="../../global/pen-favicon.svg" type="image/x-icon">
+    <title>Order Summary Component</title>
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <article class="music-card-wrap">
+            <div class="music-body-wrap">
+                <div class="music-body">
+                    <div class="music-body-text--wrap">
+                        <h2 class="music-body-heading">
+                            Order Summary
+                        </h2>
+                        <p class="music-body-sub">
+                            You can now listen to millions of songs, audiobooks, 
+                            and podcasts on any device anywhere you like!
+                        </p>
+                    </div>
+                    <div class="music-body-plan--wrap">
+                        <img 
+                            src="../images/icon-music.svg" 
+                            alt="music icon"
+                            width="48"
+                            height="48"
+                            loading="lazy"
+                            class="music-body-plan--icon"
+                        >
+                        <div class="music-body-price--wrap">
+                            <h3 class="music-plan-type">
+                                Annual-plan
+                            </h3>
+                            <p class="music-plan-pricing">
+                                &pound;59.99/year
+                            </p>
+                        </div>
+                        <a href="#" id="toggle-change">Change</a>
+                    </div>
+                    <footer class="music-footer">
+                        <button value="Proceed to Payment" id="payment">Proceed to Payment</button>
+                        <button value="Cancel Order" id="cancel">Cancel Order</button>
+                    </footer> 
+                </div>
+            </div>
+            <figure class="decorative">
+                <img 
+                    src="../images/illustration-hero.svg" 
+                    alt="decorative illustration hero image"
+                    width="450"
+                    height="220"
+                    loading="lazy"
+                    id="decor-bg"
+                >
+                <figcaption>a decorative image showing a dancing person</figcaption>
+            </figure>
+            <div id="change">
+                <i id="change-plan-type-icon">
+                    <img 
+                        src="../images/shuffle.svg" 
+                        alt="change plan type"
+                        title="change plan type"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                    >
+                </i>
+                <div class="change-types">
+                    <h3 class="change-types-heading" class="monthly-plan">
+                        Monthly-Plan
+                    </h3>
+                    <p class="change-type-price" class="monthly-plan">
+                        &pound;6.99/month
+                    </p>
+                    <button class="plan-select" id="monthly">Select</button>
+                </div>
+                <div class="change-types">
+                    <h3 class="change-types-heading" class="family-plan">
+                        Family-Plan
+                    </h3>
+                    <p class="change-type-price" class="family-plan">
+                        &pound;149.99/year
+                    </p>
+                    <button class="plan-select" id="family">Select</button>
+                </div>
+                <div class="change-types">
+                    <h3 class="change-types-heading" class="student-plan">
+                        Student-Plan
+                    </h3>
+                    <p class="change-type-price" class="student-plan">
+                        &pound;4.99/month
+                    </p>
+                    <button class="plan-select" id="student">Select</button>
+                </div>
+                <div class="change-types">
+                    <h3 class="change-types-heading" class="duo-plan">
+                        Duo-Plan
+                    </h3>
+                    <p class="change-type-price" class="duo-plan">
+                        &pound;9.99/year
+                    </p>
+                    <button class="plan-select" id="duo">Select</button>
+                </div>
+                <div class="change-types">
+                    <h3 class="change-types-heading" class="lifetime-plan">
+                        Lifetime-Plan
+                    </h3>
+                    <p class="change-type-price" class="lifetime-plan">
+                        &pound;599.99
+                    </p>
+                    <button class="plan-select" id="lifetime">Select</button>
+                </div>
+            </div>
+        </article>
+    </main>
+    <script src="app.js" defer></script>
+</body>
+</html>
