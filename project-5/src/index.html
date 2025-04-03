@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Keep Boiler -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <!-- author+web. -->
+    <meta name="author" content="Furkan O.">
+    <meta name="keywords" content="stats, preview, card, component">
+    <meta 
+        name="description" 
+        content="A practice site designed by front-end mentor and coded by Furkan O."
+    >
+    <!-- security+comp. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <!-- favicon and title -->
+    <link rel="shortcut icon" href="../../global/pen-favicon.svg" type="image/x-icon">
+    <title>Stats Preview Card</title>
+    <!-- Google Fonts Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <article class="card">
+            <div class="card-body">
+                <h1 class="card-heading">
+                    Get <span id="card-heading--highlight">insights</span> that help your business grow.
+                </h1>
+                <p class="card-sub">
+                    Discover the benefits of data analytics and make better decisions 
+                    regarding revenue, customer experience, and overall efficiency.
+                </p>
+                <div class="card-body-stat-outer--container">
+                    <div class="card-stat-inner--container" title="Over 10,000 companies trust our analytics solutions.">
+                        <h2 class="card-stat-counts--heading">
+                            10k+
+                        </h2>
+                        <p class="card-stat-counts--sub">
+                            companies
+                        </p>
+                    </div>
+                    <div class="card-stat-inner--container" title="314 customisable templates to speed up your workflow.">
+                        <h2 class="card-stat-counts--heading">
+                            314
+                        </h2>
+                        <p class="card-stat-counts--sub">
+                            templates
+                        </p>
+                    </div>
+                    <div class="card-stat-inner--container" title="12 million queries analysed monthly for actionable insights.">
+                        <h2 class="card-stat-counts--heading">
+                            12M+
+                        </h2>
+                        <p class="card-stat-counts--sub">
+                            queries
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <header class="card-header">
+                <picture id="picture">
+                    <source media="(max-width: 48rem)" srcset="../images/header-mobile.jpg" type="image/jpeg">
+                    <source media="(min-width: 49rem)" srcset="../images/header-desktop.jpg" type="image/jpeg">
+                    <img 
+                        src="../images/header-mobile.jpg" 
+                        width="327"
+                        height="240"
+                        alt="Business team analysing data charts on a screen"
+                        title="Transform your business with data insights"
+                        id="decor-img"
+                    >
+                </picture>
+            </header>
+        </article>
+    </main>
+</body>
+</html>
