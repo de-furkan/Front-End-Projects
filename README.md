@@ -18,8 +18,9 @@
 ## **🛠️ Tech Stack**  
 | Category       | Tools                                                                 |  
 |----------------|-----------------------------------------------------------------------|  
-| **Frontend**   | HTML |
+| **Markup**     | HTML        |
 | **Styling**    | Vanilla CSS |  
+|**Interactive** | JavaScript  |
 
 <!-- (Use [Shields.io](https://shields.io) for badges!) -->
 ---
