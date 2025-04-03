@@ -1,0 +1,93 @@
+/******************************
+  GLOBAL RESET
+*******************************/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+/******************************
+  BASE DOCUMENT STYLES
+*******************************/
+html,body{
+  height: 100%;
+}
+html{
+  font-size: 100%; /*16px default*/
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased; /* For WebKit browsers (e.g., Safari) */
+  -moz-osx-font-smoothing: grayscale;  /* For Firefox on macOS */
+  text-rendering: optimizeLegibility; /* Improves legibility */
+  font-variant-ligatures: common-ligatures; /* Enables common ligatures */
+}
+main{
+  min-height: 100%;
+}
+/******************************
+  MEDIA PROPERTIES
+*******************************/
+picture{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+}
+img{
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  min-height: 100%;
+  border: none;
+  object-fit: cover;
+}
+/******************************
+  TYPOGRAPHY & TEXT ELEMENTS
+*******************************/
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul, ol {
+  list-style: none;
+}
+/******************************
+  FORM ELEMENTS
+*******************************/
+input, 
+textarea, 
+select, 
+button {
+  font: inherit;
+  color: inherit;
+}
+input, 
+textarea {
+  width: 100%;
+  border: 1px solid rgba(36, 35, 41, .8);
+}
+button {
+  cursor: pointer;
+}
+/******************************
+  ACCESSIBILITY & INTERACTIVITY
+*******************************/
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
