@@ -1,7 +1,7 @@
 # Front-End-Projects
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
 
-## Project-1. Product Preview Card Component
+## project-1. Product Preview Card Component
 ---
 🌟 Gabrielle Essence Eau de Parfum – A timeless floral-solar fragrance by CHANEL, blending luxury craftsmanship with enduring elegance.
 ---
