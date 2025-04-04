@@ -3,9 +3,11 @@
 
 ## project-1. Product Preview Card Component
 ---
-🌟 Gabrielle Essence Eau de Parfum – A timeless floral-solar fragrance by CHANEL, blending luxury craftsmanship with enduring elegance.
+### 🌟 Project Description
+Gabrielle Essence Eau de Parfum – A timeless floral-solar fragrance by CHANEL, blending luxury craftsmanship with enduring elegance.
+
 ---
-## **🚀 Live Demo**  
+### **🚀 Live Demo**  
 [![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://de-furkan.github.io/Front-End-Projects/project-1/src/index.html)
 
 | Desktop View | Mobile View |  
@@ -15,7 +17,7 @@
 <!-- Could add giff here?-->
 ---
 
-## **🛠️ Tech Stack**  
+### **🛠️ Tech Stack**  
 | Category       | Tools                                                                 |  
 |----------------|-----------------------------------------------------------------------|  
 | **Markup**     | HTML        |
