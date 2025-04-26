@@ -1,0 +1,576 @@
+@use '../../../global/normalize.css';
+@use 'variables' as *;
+@use 'utilities' as *;
+@use 'tokens' as *;
+@use 'media' as *;
+
+// global
+html {
+    font-family: var(--ff);
+}
+
+/*
+*********************************
+    THEME
+*********************************
+*/
+@media (prefers-color-scheme: light) {
+    html:not([data-theme='dark'])
+
+    main{
+        background-color: get-color('F6F8FF');
+    }
+
+    //logo colour
+    .user__header__logo {
+        color: get-color('222731');
+    }
+    // theme toggle text & icon colour
+    #theme__text--dark,
+    #moon{
+        color: get-color('4B6A9B');
+        fill: get-color('4B6A9B');
+    }
+
+    // remove icon for light mode
+    #theme__text--light,
+    #sun{
+        display: none;
+    }
+
+    /*
+    *********************************
+        SEARCH CONTAINER
+    *********************************
+    */
+    .search__container{
+        background-color: get-color('FFFFFF');
+    }
+    #search__container__search-user{
+        color: get-color('4B6A9B');
+    }
+    #search-profile{
+        &::before{
+            background-color: #ffffff;
+        }
+    }
+
+    /*
+    *********************************
+        PROFILE INFO CONTAINER
+    *********************************
+    */
+    .profile{
+        background-color: get-color('FFFFFF');
+
+        &__info{
+            &__display-name{
+                color: get-color('2B3442');
+            }
+            &__join-date{
+                color: get-color('697C9A');
+            }
+        }
+
+        &__bio{
+            color: get-color('4B6A9B');
+        }
+
+        &__stats{
+            background-color: get-color('F6F8FF');
+
+            &__cols{
+                &--heading{
+                    color: get-color('4B6A9B');
+                }
+                &--count{
+                    color: get-color('2B3442');
+                }
+            }
+        }
+
+        &__meta{
+            color: get-color('4B6A9B');
+
+            &__container{
+                &--icon{
+                    fill: get-color('4B6A9B');
+                }
+            }
+        }
+    }
+}
+@media (prefers-color-scheme: dark) {
+    html:not([data-theme='light'])
+    
+    main{
+        background-color: get-color('141D2F'); //dark main-bg
+    }
+
+    //logo colour
+    .user__header__logo {
+        color: get-color('FFFFFF');
+    }
+    // theme toggle text & icon colour
+    #theme__text--light,
+    #sun{
+        color: get-color('FFFFFF');
+        fill: get-color('FFFFFF');
+    }
+
+    // remove icon for dark mode
+    #theme__text--dark,
+    #moon{
+        display: none;
+    }
+
+    /*
+    *********************************
+        SEARCH CONTAINER
+    *********************************
+    */
+    .search__container{
+        background-color: get-color('1E2A47');
+    }
+    #search__container__search-user{
+        color: get-color('FFFFFF');
+    }
+    #search-profile{
+        &::before{
+            background-color: #1E2A47;
+        }
+    }
+    /*
+    *********************************
+        PROFILE INFO CONTAINER
+    *********************************
+    */
+    .profile{
+        background-color: get-color('1E2A47');
+
+        &__info{
+            &__display-name{
+                color: get-color('FFFFFF');
+            }
+            &__join-date{
+                color: get-color('FFFFFF');
+            }
+        }
+
+        &__bio{
+            color: get-color('FFFFFF');
+        }
+
+        &__stats{
+            background-color: get-color('141D2F');
+
+            &__cols{
+                &--heading{
+                    color: get-color('FFFFFF');
+                }
+                &--count{
+                    color: get-color('FFFFFF');
+                }
+            }
+        }
+
+        &__meta{
+            color: get-color('FFFFFF');
+
+            &__container{
+                &--icon{
+                    fill: get-color('FFFFFF');
+                }
+            }
+        }
+    }
+}
+
+html[data-theme='light'] {
+    main{
+        background-color: get-color('F6F8FF');
+    }
+
+    //logo colour
+    .user__header__logo {
+        color: get-color('222731');
+    }
+
+    // fallback dark icon to initial value to display
+    #theme__text--dark,
+    #moon{
+        display: initial;
+    }
+    // theme toggle text & icon colour
+    #theme__text--dark,
+    #moon{
+        color: get-color('4B6A9B');
+        fill: get-color('4B6A9B');
+    }
+
+    // remove icon for light mode
+    #theme__text--light,
+    #sun{
+        display: none;
+    }
+
+    /*
+    *********************************
+        SEARCH CONTAINER
+    *********************************
+    */
+    .search__container{
+        background-color: get-color('FFFFFF');
+    }
+    #search__container__search-user{
+        color: get-color('4B6A9B');
+    }
+    #search-profile{
+        &::before{
+            background-color: #ffffff;
+        }
+    }
+    /*
+    *********************************
+        PROFILE INFO CONTAINER
+    *********************************
+    */
+    .profile{
+        background-color: get-color('FFFFFF');
+
+        &__info{
+            &__display-name{
+                color: get-color('2B3442');
+            }
+            &__join-date{
+                color: get-color('697C9A');
+            }
+        }
+
+        &__bio{
+            color: get-color('4B6A9B');
+        }
+
+        &__stats{
+            background-color: get-color('F6F8FF');
+
+            &__cols{
+                &--heading{
+                    color: get-color('4B6A9B');
+                }
+                &--count{
+                    color: get-color('2B3442');
+                }
+            }
+        }
+
+        &__meta{
+            color: get-color('4B6A9B');
+
+            &__container{
+                &--icon{
+                    fill: get-color('4B6A9B');
+                }
+            }
+        }
+    }
+}
+html[data-theme='dark'] {
+    main{
+        background-color: get-color('141D2F');
+    }
+
+    //logo colour
+    .user__header__logo {
+        color: get-color('FFFFFF');
+    }
+
+    // fallback light icon to initial value to display
+    #theme__text--light,
+    #sun{
+        display: initial;
+    }
+    // theme toggle text & icon colour
+    #theme__text--light,
+    #sun{
+        color: get-color('FFFFFF');
+        fill: get-color('FFFFFF');
+    }
+
+    // remove icon for dark mode
+    #theme__text--dark,
+    #moon{
+        display: none;
+    }
+
+    /*
+    *********************************
+        SEARCH CONTAINER
+    *********************************
+    */
+    .search__container{
+        background-color: get-color('1E2A47');
+    }
+    #search__container__search-user{
+        color: get-color('FFFFFF');
+    }
+    #search-profile{
+        &::before{
+            background-color: #1E2A47;
+        }
+    }
+    /*
+    *********************************
+        PROFILE INFO CONTAINER
+    *********************************
+    */
+    .profile{
+        background-color: get-color('1E2A47');
+
+        &__info{
+            &__display-name{
+                color: get-color('FFFFFF');
+            }
+            &__join-date{
+                color: get-color('FFFFFF');
+            }
+        }
+
+        &__bio{
+            color: get-color('FFFFFF');
+        }
+
+        &__stats{
+            background-color: get-color('141D2F');
+
+            &__cols{
+                &--heading{
+                    color: get-color('FFFFFF');
+                }
+                &--count{
+                    color: get-color('FFFFFF');
+                }
+            }
+        }
+
+        &__meta{
+            color: get-color('FFFFFF');
+
+            &__container{
+                &--icon{
+                    fill: get-color('FFFFFF');
+                }
+            }
+        }
+    }
+}
+
+/*
+*********************************
+    BASE STYLES
+*********************************
+*/
+main{
+    @include c-grid-center;
+    padding-inline: clamp(1.5rem, -5.784rem + 31.08vw, 22.188rem);
+    padding-block-start: clamp(1.938rem, -0.549rem + 10.61vw, 9rem);
+    padding-block-end: clamp(4.938rem, 3.485rem + 6.197vw, 9.063rem);
+    @include c-transition;
+}
+
+// <article> container
+.user__container{
+    @include c-max-inline(730, 'rem');
+}
+
+// header section
+.user__header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-bottom: calc(36/16 * 1rem);
+
+    &__logo{
+        flex: 1;
+        @include c-font('bold', calc(26/16 * 1rem));
+    }
+    &__theme__container{
+        @include c-font('bold', calc(13/16 * 1rem));
+        @include c-letter-spacing(2.5);
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        cursor: pointer;
+    }
+}
+
+.search__container{
+    @include c-br(15);
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: none;
+    min-height: calc(60/16 * 1rem);
+    padding: clamp(0.438rem, 0.371rem + 0.282vw, 0.625rem);
+
+    #search__container__search-icon{
+        fill: get-color('0079FF');
+        margin-inline-end: calc(8.95/16 * 1rem); 
+
+        @include respond-to(large-tablets) {
+            margin-inline-end: calc(23.94/16 * 1rem);
+        }
+        @include respond-to(large-screens) {
+            margin-inline-end: calc(36.94/16 * 1rem);
+        }
+    }
+
+    #search-user-span{
+        margin-right: auto;
+        flex: 1;
+    }
+    #search__container__search-user{
+        background-color: transparent;
+        border: none;
+        @include c-font('400', clamp(0.813rem, 0.702rem + 0.469vw, 1.125rem));
+        line-height: calc(25/16 * 1rem);
+    }
+
+    #search-profile{
+        color: get-color('FFFFFF');
+        background-color: get-color('0079FF');
+        border: none;
+        max-inline-size: clamp(5.25rem, 4.766rem + 2.066vw, 6.625rem);
+        min-height: calc(46/16 * 1rem);
+        @include c-br(10);
+        flex: 1;
+        font-weight: bold;
+        font-size: clamp(0.875rem, 0.831rem + 0.188vw, 1rem);
+        position: relative;
+        top: 0;
+
+        #results{
+            display: none;
+        }
+
+        @include respond-to(large-screens) {
+            #results{
+                display: var(--display-none);
+                background-color: white;
+                color: red;
+                position: absolute;
+                left: -140px;
+                top: 0px;
+                padding-inline: 20px;
+                padding-block: 10px;
+            }
+        }
+    }
+}
+
+.profile{
+    margin-block-start: clamp(1rem, 0.824rem + 0.751vw, 1.5rem);
+    @include c-br(15);
+    max-height: fit-content;
+    padding-block: clamp(2rem, 1.648rem + 1.502vw, 3rem);
+    padding-inline: clamp(1.5rem, 0.972rem + 2.254vw, 3rem);
+
+    img{
+        height: clamp(4.375rem, 3.341rem + 4.413vw, 7.313rem);
+        max-width: clamp(4.375rem, 3.341rem + 4.413vw, 7.313rem);
+        border: 2px solid transparent;
+        border-radius: 100%;
+        float: left;
+        margin-inline-end: clamp(1.25rem, 0.876rem + 1.596vw, 2.313rem);
+    }
+
+    &__info{
+        margin-block-end: calc(33/16 * 1rem);
+        float: left;
+        
+        @include respond-to(large-screens) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 90px;
+        }
+
+        &__display-name{
+            color: get-color('2B3442');
+            @include c-font('bold', clamp(1rem, 0.78rem + 0.939vw, 1.625rem));
+            margin-block-end: calc(2/16 * 1rem);
+        }
+        
+        &__user-name{
+            color: get-color('0079FF');
+            @include c-font('400', clamp(0.813rem, 0.746rem + 0.282vw, 1rem));
+            margin-block-end: calc(6/16 * 1rem);
+        }
+        &__join-date{
+            @include c-font('400', clamp(0.813rem, 0.768rem + 0.188vw, 0.938rem));
+        }
+    }
+
+    &__bio{
+        clear: both;
+        @include c-font('400', clamp(0.813rem, 0.768rem + 0.188vw, 0.938rem));
+        line-height: calc(25/16 * 1rem);
+        margin-block-end: clamp(1.438rem, 1.239rem + 0.845vw, 2rem);
+
+        @include respond-to(large-screens) {
+            margin-block-start: calc(140/16 * 1rem);
+        }
+    }
+
+    &__stats{
+        @include c-br(10);
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-flow: row wrap;
+        text-align: center;
+        padding-block: calc(18/16 * 1rem);
+        padding-inline: calc(14/16 * 1rem);
+
+        &__cols{
+            display: flex;
+            flex-flow: column wrap;
+            gap: clamp(0.5rem, 0.654rem + -0.657vw, 0.063rem);
+
+            &--heading{
+                @include c-font('400', clamp(0.688rem, 0.643rem + 0.188vw, 0.813rem));
+            }
+            &--count{
+                @include c-font('bold', clamp(1rem, 0.868rem + 0.563vw, 1.375rem));
+            }
+        }
+    }
+
+    &__meta{
+        
+        margin-block-start: clamp(1.5rem, 1.214rem + 1.221vw, 2.313rem);
+        @include c-font('400', clamp(0.813rem, 0.768rem + 0.188vw, 0.938rem));
+        color: get-color('4B6A9B');
+
+        @include respond-to(large-tablets){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 1rem;
+            align-items: start;
+            justify-items: start;
+        }
+
+        &__container{
+            display: flex;
+            flex-flow: row wrap;
+            gap: calc(19.2/16 * 1rem);
+            margin-block-end: clamp(1rem, 0.934rem + 0.282vw, 1.188rem);
+
+            .non-valid{
+                opacity: 50%;
+                a{
+                    cursor: default;
+                }
+            }
+        }
+    }
+}
