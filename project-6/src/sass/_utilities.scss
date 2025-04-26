@@ -1,0 +1,106 @@
+@use 'variables' as *;
+@use 'tokens' as *;
+@use 'sass:map'; //Sass's built-in map module
+@use 'sass:list';
+@use 'sass:meta';
+// flex or grid placement of items to center
+@mixin c-flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+@mixin c-grid-center() {
+    display: grid;
+    place-items: center;
+};
+
+/*
+*****************************************************
+            max-inline width
+*****************************************************
+*/
+@mixin c-max-inline($width, $type) {
+    @if not list.index(('px', 'em', 'rem'), $type) {
+        @error 'Invalid expression: #{$type}. Available types: {"px", "em", "rem"}'; 
+    };
+    @if $type == 'px' {
+        max-inline-size: #{$width}px;
+    };
+    @if $type == 'em' {
+        max-inline-size: #{calc($width / 16)}em;
+    };
+    @if $type == 'rem' {
+        max-inline-size: #{calc($width / 16)}rem;
+    };
+    width: 100%;
+};
+
+/*
+*****************************************************
+            BORDER PROPS
+*****************************************************
+*/
+// create a border with custom thickness, type and colour
+@mixin c-border($thickness, $type, $color) {
+    @if not map.has-key($sizes, $thickness) {
+        @error 'Invalid size or size does not exist: #{$thickness}.';
+    };
+    border: map.get($sizes, $thickness) $type $color;
+};
+@mixin c-br($size) {
+    border-radius: calc($size/16 * 1rem);
+}
+
+/*
+*****************************************************
+            GETTER - COLOURS
+*****************************************************
+*/
+@function get-color($color) {
+    $color-vars: (
+        '141D2F': var(--c-141D2F),
+        'F6F8FF': var(--c-F6F8FF),
+        '4B6A9B': var(--c-4B6A9B),
+        'FFFFFF': var(--c-FFFFFF),
+        '222731': var(--c-222731),
+        '1E2A47': var(--c-1E2A47),
+        '0079FF': var(--c-0079FF),
+        '979797': var(--c-979797),
+        '2B3442': var(--c-2B3442),
+        '697C9A': var(--c-697C9A),
+        'red': var(--red),
+    // Add all other colors here
+  );
+  
+  @if not map.has-key($color-vars, $color) {
+    @error 'Color "#{$color}" not found. Available colors: #{map.keys($color-vars)}';
+  }
+  
+  @return map.get($color-vars, $color);
+}
+
+/*
+*****************************************************
+            FONT SETUP
+*****************************************************
+*/
+@mixin c-font($fw, $fs) {
+    font-weight: map.get($weights, $fw);
+    font-size: $fs;
+
+    @if not map.has-key($weights, $fw) {
+        @error 'Weight "#{$fw}" not found. Available font-weight\'s: #{map.keys($weights)}';
+    }
+}
+@mixin c-letter-spacing($size) {
+    letter-spacing: calc($size/16 * 1rem);
+}
+/*
+*****************************************************
+            Transitions
+*****************************************************
+*/
+@mixin c-transition() {
+    transition: all .3s ease-in-out;
+}
