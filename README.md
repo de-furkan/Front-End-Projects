@@ -80,6 +80,20 @@ Choose a plan, view a summary, and make the purchase.
 ![project-6](https://github.com/user-attachments/assets/6b0d0961-4ae8-4aa3-abb6-af8b2fb104d8)
 ---
 
+### Other Screenshots
+
+#### Mobile View
+![image](https://github.com/user-attachments/assets/80a89324-0c7c-402d-9102-dbabdb922d79)
+
+#### No Results
+![image](https://github.com/user-attachments/assets/1ede49b0-cd9c-410d-810a-1e43e81bd0e7)
+
+#### Modern Approach to Themes with 'data-theme'
+![theme](https://github.com/user-attachments/assets/d8eb075a-11ec-41b4-a544-5256e0e3c3c6)
+
+#### Clean & Readable Console Outputs with Tables
+![image](https://github.com/user-attachments/assets/d11b8d4a-2596-47e1-bf8a-b448a3c1addf)
+
 ### **🛠️ Tech Stack**  
 | Category       | Tools                                                                 |  
 |----------------|-----------------------------------------------------------------------|  
