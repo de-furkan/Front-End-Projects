@@ -62,3 +62,29 @@ Choose a plan, view a summary, and make the purchase.
 | **Styling**    | Vanilla CSS |  
 |**Interactive** | JavaScript  |
 ---
+
+## project-6. devfinder - search a user on GitHub 
+---
+### 🌟 Project Description
+
+<ol>
+  <li>Automatically detects theme preference on operating system</li>
+  <li>Allows manual over-ride of theme</li>
+  <li>Allows user search through GitHub API</li>
+</ol>
+
+---
+### **🚀 Live Demo**  
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://de-furkan.github.io/Front-End-Projects/project-6/src/index.html)
+
+![project-6](https://github.com/user-attachments/assets/6b0d0961-4ae8-4aa3-abb6-af8b2fb104d8)
+---
+
+### **🛠️ Tech Stack**  
+| Category       | Tools                                                                 |  
+|----------------|-----------------------------------------------------------------------|  
+| **Markup**     | HTML        |
+| **Styling**    | SCSS        |  
+|**Interactive** | JavaScript  |
+|**GitHub API**  | FETCH       |
+---
