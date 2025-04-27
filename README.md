@@ -1,4 +1,5 @@
-# Front-End-Projects
+# Featured Front-End-Projects
+<!-- (Use [Shields.io](https://shields.io) for badges!) -->
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)  
 
 ## project-1. Product Preview Card Component
@@ -10,11 +11,7 @@ Gabrielle Essence Eau de Parfum – A timeless floral-solar fragrance by CHANEL,
 ### **🚀 Live Demo**  
 [![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://de-furkan.github.io/Front-End-Projects/project-1/src/index.html)
 
-| Desktop View | Mobile View |  
-|--------------|-------------|  
-| ![image](https://github.com/user-attachments/assets/06425e44-3c4e-4a65-a32c-6d6385ed24a2)| ![image](https://github.com/user-attachments/assets/f46a463f-89ba-4114-9b3c-0a0374646500)
-
-<!-- Could add giff here?-->
+![project-1](https://github.com/user-attachments/assets/be12e239-f318-48eb-af46-3b94db7f5d36)
 ---
 
 ### **🛠️ Tech Stack**  
@@ -23,6 +20,24 @@ Gabrielle Essence Eau de Parfum – A timeless floral-solar fragrance by CHANEL,
 | **Markup**     | HTML        |
 | **Styling**    | Vanilla CSS |  
 |**Interactive** | JavaScript  |
+---
 
-<!-- (Use [Shields.io](https://shields.io) for badges!) -->
+## project-2. QR Card Component
+---
+### 🌟 Project Description
+Gabrielle Essence Eau de Parfum – A timeless floral-solar fragrance by CHANEL, blending luxury craftsmanship with enduring elegance.
+
+---
+### **🚀 Live Demo**  
+[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](https://de-furkan.github.io/Front-End-Projects/project-2/src/index.html)
+
+![project-2](https://github.com/user-attachments/assets/1886dbd8-e767-4379-a17e-2da099fa96e5)
+---
+
+### **🛠️ Tech Stack**  
+| Category       | Tools                                                                 |  
+|----------------|-----------------------------------------------------------------------|  
+| **Markup**     | HTML        |
+| **Styling**    | Vanilla CSS |  
+|**Interactive** | JavaScript  |
 ---
